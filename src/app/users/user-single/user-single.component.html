@@ -1,0 +1,43 @@
+﻿<div *ngIf="user">
+    <div class= "jumbotron text-center">
+        <h2>User Profile</h2>
+    </div>
+    <div class= "jumbotron text-center">     
+<!--<div class="container">
+        <div class="row">
+            <div class="col-md-6 text-right">
+            <h3><strong>Name :</strong></h3>
+            <h3><strong>Phone :</strong></h3>
+            <h3><strong>Email :</strong></h3>  
+            </div> 
+             <div class="col-md-6 text-left">
+            <h3>{{user.name}}</h3>
+            <h3>{{user.phone}}</h3>
+            <h3>{{user.email}}</h3>  
+            </div>         
+        </div>
+</div>-->
+
+ <div class="form-group">
+            <label>Name :</label>
+            {{user.name}}
+        </div>
+
+        <div class="form-group">
+            <label>Phone :</label>
+            {{user.phone}}
+        </div>
+
+         <div class="form-group">
+            <label>Email :</label>
+            {{user.email}}
+        </div>
+   
+    <div class="profile-card ">    
+    <img [src]="user.avatar" class="img-rounded"/>
+    </div>
+   
+     <a [routerLink]="['/users', user.id, 'edit']" class="btn btn-primary btn-sm">Edit</a>
+    <a (click)="deleteUser()" class="btn btn-danger btn-sm">Delete</a>
+    </div>
+</div>
